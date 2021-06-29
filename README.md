@@ -2,6 +2,8 @@
 
 ## Usage
 
+Currently, available format specifier is `"%s"` alone.
+
 ```
 $ fmtcat <format> [filenames...]
 ```
