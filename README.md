@@ -12,5 +12,5 @@ Almost same as:
 
 ```
 # in zsh
-$ printf <format> "$(< filename1)" "$(< filename2) ..."
+$ printf <format> "$(< filename1)" "$(< filename2)" ...
 ```
