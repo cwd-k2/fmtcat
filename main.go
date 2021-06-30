@@ -37,7 +37,6 @@ func main() {
 
 	for _, arg := range os.Args[2:] {
 		fp, err := os.Open(arg)
-
 		if err != nil && err != os.ErrNotExist {
 			fmt.Fprintf(os.Stderr, "fmtcat: no such file or directory: %s\n", arg)
 			cats = append(cats, "")
@@ -45,6 +44,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "fmtcat: error: %s\n", err.Error())
 			os.Exit(1)
 		} else {
+			defer fp.Close()
 			cats = append(cats, &Cat{fp})
 		}
 	}
